@@ -1,0 +1,147 @@
+body {
+  background-color: #b5c6d8;
+  margin: 0;
+  font-size: 17px;
+}
+
+body,
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 200;
+}
+
+.main-container {
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@supports (height: 100dvh) {
+  .main-container {
+    max-height: 100dvh;
+  }
+}
+
+.header {
+  background-color: white;
+  position: sticky;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.header svg {
+  width: 300px;
+}
+
+.error {
+  background-color: #d81939;
+}
+
+.container {
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 90px);
+}
+
+.container-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-top {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 80%;
+}
+
+.text-large {
+  font-size: 33px;
+  line-height: 38px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+
+.form {
+  padding-bottom: 30px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 15px;
+  border: 0;
+  color: #fff;
+  display: block;
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 342px;
+  max-width: 100%;
+  min-height: 45px;
+}
+
+button.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+button span {
+  display: block;
+}
+
+#initial {
+  display: flex;
+}
+
+#success {
+  display: none;
+}
+
+.active {
+  display: flex !important;
+}
+
+.inactive {
+  display: none !important;
+}
+
+#log-in-button.loading {
+  opacity: 0.5;
+}
+
+.form-log-in {
+  max-width: 90%;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-log-in,
+  .form-download {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .container-inner {
+    padding-bottom: 90px;
+  }
+}
